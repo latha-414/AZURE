@@ -27,7 +27,7 @@ module "resource_group" {
 
 # Key Vault Module
 module "key_vault" {
-  source = "../../modules/key-vault"
+  source = "../../modules/key-vaults"
   
   key_vault_name            = var.key_vault_name
   environment              = var.environment
