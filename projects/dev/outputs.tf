@@ -21,20 +21,20 @@ output "key_vault_uri" {
 }
 
 # SQL Database Outputs
-output "sql_server_name" {
-  description = "Name of the SQL Server"
-  value       = module.sql_database.sql_server_name
-}
+# output "sql_server_name" {
+#   description = "Name of the SQL Server"
+#   value       = module.sql_database.sql_server_name
+# }
 
-output "sql_server_fqdn" {
-  description = "Fully qualified domain name of the SQL Server"
-  value       = module.sql_database.sql_server_fqdn
-}
+# output "sql_server_fqdn" {
+#   description = "Fully qualified domain name of the SQL Server"
+#   value       = module.sql_database.sql_server_fqdn
+# }
 
-output "database_name" {
-  description = "Name of the SQL Database"
-  value       = module.sql_database.database_name
-}
+# output "database_name" {
+#   description = "Name of the SQL Database"
+#   value       = module.sql_database.database_name
+# }
 
 # App Service Outputs
 output "app_service_name" {
