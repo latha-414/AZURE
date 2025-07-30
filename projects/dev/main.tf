@@ -42,24 +42,24 @@ module "key_vault" {
 }
 
 # SQL Database Module
-module "sql_database" {
-  source = "../../modules/sql-database"
+# module "sql_database" {
+#   source = "../../modules/sql-database"
   
-  sql_server_name            = var.sql_server_name
-  database_name             = var.database_name
-  environment               = var.environment
-  resource_group_name       = module.resource_group.resource_group_name
-  location                 = module.resource_group.location
-  administrator_login       = var.sql_administrator_login
-  key_vault_name           = module.key_vault.key_vault_name
-  key_vault_resource_group = module.resource_group.resource_group_name
-  database_sku             = var.database_sku
-  max_size_gb              = var.database_max_size_gb
-  allowed_ip_ranges        = var.sql_allowed_ip_ranges
-  tags                     = var.tags
+#   sql_server_name            = var.sql_server_name
+#   database_name             = var.database_name
+#   environment               = var.environment
+#   resource_group_name       = module.resource_group.resource_group_name
+#   location                 = module.resource_group.location
+#   administrator_login       = var.sql_administrator_login
+#   key_vault_name           = module.key_vault.key_vault_name
+#   key_vault_resource_group = module.resource_group.resource_group_name
+#   database_sku             = var.database_sku
+#   max_size_gb              = var.database_max_size_gb
+#   allowed_ip_ranges        = var.sql_allowed_ip_ranges
+#   tags                     = var.tags
   
-  depends_on = [module.resource_group, module.key_vault]
-}
+#   depends_on = [module.resource_group, module.key_vault]
+# }
 
 # App Service Module
 module "app_service" {
