@@ -33,7 +33,7 @@ app_settings = {
 }
 
 # Azure Functions Configuration
-function_app_name         = "myapp-functions"
+function_app_name         = "myappfn"
 function_app_sku         = "Y1"
 functions_worker_runtime = "node"
 function_app_settings = {
