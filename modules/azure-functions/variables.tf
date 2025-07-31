@@ -3,8 +3,13 @@ variable "function_app_name" {
   type        = string
 }
 
-variable "environment" {
-  description = "Environment name"
+variable "service_plan_name" {
+  description = "Name of the App Service Plan"
+  type        = string
+}
+
+variable "storage_account_name" {
+  description = "Name of the Storage Account"
   type        = string
 }
 
@@ -18,56 +23,16 @@ variable "location" {
   type        = string
 }
 
-variable "function_app_sku" {
-  description = "SKU for the Function App Plan"
+variable "sku_name" {
+  description = "SKU name for App Service Plan"
   type        = string
-  default     = "Y1"  # Consumption plan
-}
-
-variable "key_vault_name" {
-  description = "Name of the Key Vault"
-  type        = string
-}
-
-variable "key_vault_resource_group" {
-  description = "Resource group of the Key Vault"
-  type        = string
-}
-
-variable "functions_worker_runtime" {
-  description = "Functions worker runtime"
-  type        = string
-  default     = "node"
+  default     = "Y1"
 }
 
 variable "app_settings" {
-  description = "Additional app settings"
+  description = "App settings for the function app"
   type        = map(string)
   default     = {}
-}
-
-variable "always_on" {
-  description = "Always on setting (not applicable for Consumption plan)"
-  type        = bool
-  default     = false
-}
-
-variable "node_version" {
-  description = "Node.js version"
-  type        = string
-  default     = "18"
-}
-
-variable "cors_allowed_origins" {
-  description = "CORS allowed origins"
-  type        = list(string)
-  default     = ["*"]
-}
-
-variable "cors_support_credentials" {
-  description = "CORS support credentials"
-  type        = bool
-  default     = false
 }
 
 variable "tags" {
