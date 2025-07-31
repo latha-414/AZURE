@@ -1,5 +1,5 @@
 resource_group_name         = "rg-myapp-prod"
-location                   = "East US"
+location                   = "centralus"
 key_vault_name            = "kv-myapp-prod-001"
 sql_server_name           = "sql-myapp-prod-001"
 database_name             = "db-myapp-prod"
