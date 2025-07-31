@@ -1,25 +1,15 @@
-output "sql_server_name" {
-  description = "Name of the SQL Server"
-  value       = azurerm_mssql_server.main.name
-}
-
-output "sql_server_fqdn" {
-  description = "Fully qualified domain name of the SQL Server"
-  value       = azurerm_mssql_server.main.fully_qualified_domain_name
-}
-
-output "database_name" {
-  description = "Name of the SQL Database"
-  value       = azurerm_mssql_database.main.name
+output "sql_server_id" {
+  description = "ID of the SQL Server"
+  value       = azurerm_mssql_server.this.id
 }
 
 output "database_id" {
   description = "ID of the SQL Database"
-  value       = azurerm_mssql_database.main.id
+  value       = azurerm_mssql_database.this.id
 }
 
 output "connection_string" {
   description = "Connection string for the database"
-  value       = "Server=tcp:${azurerm_mssql_server.main.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_mssql_database.main.name};Persist Security Info=False;User ID=${azurerm_mssql_server.main.administrator_login};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+  value       = "Server=${azurerm_mssql_server.this.fully_qualified_domain_name};Database=${azurerm_mssql_database.this.name};User ID=${var.admin_username};Password=${var.admin_password};Encrypt=true;Connection Timeout=30;"
   sensitive   = true
 }
