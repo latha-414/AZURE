@@ -9,7 +9,7 @@ terraform {
   cloud {
     organization = "your-hcp-org-name"
     workspaces {
-      name = "azure-dev"
+      name = "project-dev"
     }
   }
 }
