@@ -7,7 +7,7 @@ terraform {
   }
   
   cloud {
-    organization = "your-hcp-org-name"
+    organization = "temperhcp"
     workspaces {
       name = "project-dev"
     }
